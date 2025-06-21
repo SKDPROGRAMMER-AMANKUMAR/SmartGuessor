@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SmartGuessor - Number Guessing Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="logo">SmartGuessor</h1>
+        <p class="subtitle">Test your guessing skills!</p>
+        
+        <div class="game-info">
+            <div class="range-text">Guess a number between 1 and 100</div>
+            <div class="attempts-counter">Attempts: <span id="attempts">0</span></div>
+        </div>
+        
+        <div class="input-section">
+            <input type="number" id="guessInput" class="guess-input" placeholder="Enter your guess..." min="1" max="100">
+            <div>
+                <button id="submitBtn" class="submit-btn">Submit Guess</button>
+                <button id="resetBtn" class="reset-btn">New Game</button>
+            </div>
+        </div>
+        
+        <div id="feedback" class="feedback neutral">
+            Make your first guess!
+        </div>
+        
+        <div class="history">
+            <h3>Game History</h3>
+            <div id="historyList" class="history-list">
+                <div class="history-item">No guesses yet...</div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalGames">0</div>
+                    <div class="stat-label">Games Played</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="bestScore">-</div>
+                    <div class="stat-label">Best Score</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="winRate">0%</div>
+                    <div class="stat-label">Win Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
